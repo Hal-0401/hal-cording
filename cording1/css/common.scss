@@ -1,0 +1,94 @@
+html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+    width: 100%;
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+    font-weight: 500;
+    font-size: 1.6em;
+    line-height: 2.4rem;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.inner {
+    padding: 0 2%;
+}
+.index-news, .index-sv, .index_works {
+    margin-bottom: 120px;
+}
+h3 {
+    font-size: 3.0rem;
+    color:#391e88;
+    font-weight: 900;
+    text-align: center;
+
+    p {
+        font-size: 1.3rem;
+        color:#391e88;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 5px;
+    }
+}
+ul {
+    list-style: none;
+}
+.header-space {
+    height: 200px;
+}
+.breadcrumb {
+    position: sticky;
+    top: 60px;
+    background-color: #ddd;
+
+}
+.breadcrumb-list {
+  max-width: 1400px;
+  display: flex;
+    list-style: none;
+    padding: 10px 0 10px 10px;
+       
+
+    li {
+        color: #000;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+   
+  &:nth-last-child(1) {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  
+  &:not(:last-of-type)::after {
+    content: "›";
+    margin: 0 .6em; /* 記号の左右の余白 */
+    color: #000; /* 記号の色 */
+    padding: 0 3px;
+  }
+}
+}
+.breadcrumb-list_home:hover {
+text-decoration: underline;
+}
+
+@media screen and (min-width:768px) {
+    .breadcrumb {
+        padding-left: 10px;
+      }
+    h3 {
+        font-size: 3.6rem;
+    }
+    .sponly {
+        display: none;
+      }
+      .breadcrumb-list {
+          padding-left: 0;
+     }
+    }

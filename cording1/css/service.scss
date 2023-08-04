@@ -1,0 +1,32 @@
+
+.service {
+    margin: 30px 0 60px 0;
+}
+.service-list1, .service-list2, .service-list3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.list1_title, .list2_title, .list3_title {
+  margin: 20px 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.list1_text, .list2_text, .list3_text {
+  font-weight: 450;
+  text-align: left;
+  line-height: 2.5rem;
+}
+@media screen and (min-width:768px) {
+    .service-list1, .service-list2, .service-list3 {
+        display: flex;
+        align-items: center;
+    }
+    .service-list1_title, .service-list2_title, .service-list3_title {
+        text-align: left;
+        width: 60%;
+        margin-left: 40px;
+    }
+    .service-list1 img, .service-list2 img, .service-list3 img {
+      width: 40%;
+  }
+}

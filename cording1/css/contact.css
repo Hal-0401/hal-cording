@@ -1,0 +1,122 @@
+@charset "UTF-8";
+.contact {
+  margin: 50px 0 60px 0;
+}
+
+.contact-text {
+  text-align: center;
+  font-weight: 400;
+  margin: 30px 0 40px 0;
+}
+
+.contact-form {
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  max-width: 800px;
+  padding: 30px;
+}
+.contact-form dt {
+  margin-bottom: 10px;
+}
+.contact-form dt span {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  color: #391e88;
+}
+.contact-form dt .contact-gray {
+  font-weight: 400;
+  color: #000;
+}
+.contact-form dd {
+  margin-bottom: 30px;
+}
+
+.contact-item1 {
+  margin-bottom: 30px;
+}
+
+.radio-list1 dd {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.contact-item2 dd, .contact-item3 dd, .contact-item4 dd, .contact-item5 dd, .contact-item6 dd, .contact-item7 dd {
+  background-color: #fff;
+  border: #aaa 1px solid;
+  border-radius: 5px;
+}
+.contact-item2 dd input, .contact-item3 dd input, .contact-item4 dd input, .contact-item5 dd input, .contact-item6 dd input, .contact-item7 dd input {
+  width: 100%;
+  padding: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 5px 0 0 10px;
+  font-weight: 400;
+  height: 200px;
+}
+
+select {
+  background-color: #fff;
+  border: #aaa 1px solid;
+  border-radius: 5px;
+  font-weight: 400;
+  width: 100%;
+  padding: 10px;
+}
+
+.form-btn {
+  margin-top: 30px;
+  text-align: center;
+}
+.form-btn input {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(-50deg, #3b0355 0%, #c104eb 80%);
+  border-radius: 50px;
+  color: #fff;
+  padding: 15px 70px;
+  letter-spacing: 0.1rem;
+}
+.form-btn input::after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px; /* 要素の右からの距離 */
+  width: 0;
+  height: 0;
+  border-radius: 2px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid #fff;
+  transition: all 0.3s ease 0s;
+}
+.form-btn input:hover:after {
+  transform: translateX(0.1875em);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form {
+    padding: 80px;
+  }
+  .radio-list1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .radio-list1 dd {
+    margin: 0 40px 10px 0;
+    font-weight: 400;
+  }
+  .contact-item2 dd, .contact-item3 dd, .contact-item4 dd {
+    width: 300px;
+  }
+  .contact-item5 dd {
+    width: 200px;
+  }
+  select {
+    width: 300px;
+  }
+}/*# sourceMappingURL=contact.css.map */

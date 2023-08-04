@@ -1,0 +1,121 @@
+.news-info {
+  max-width: 800px;
+  margin: 40px auto 60px auto;
+}
+
+.info-title {
+  margin-bottom: 20px;
+}
+
+.info-title_theme {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+  margin-bottom: 10px;
+}
+
+.info-title_time time {
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+.info-title_time span {
+  display: inline-block;
+  width: 80px;
+  background-color: #e8e8e8;
+  padding: 2px 8px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.info-text {
+  font-weight: 400;
+  margin: 30px 0;
+  line-height: 2.5rem;
+}
+
+.bigheadline, .subheadline {
+  margin-bottom: 30px;
+}
+.bigheadline p, .subheadline p {
+  margin: 20px 0;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.bigheadline-title {
+  position: relative;
+  font-size: 1.8rem;
+  padding-left: 20px;
+}
+.bigheadline-title::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #391e88;
+}
+
+.subheadline-title {
+  font-size: 1.7rem;
+}
+
+.news-info_sns iframe {
+  margin-left: 10px;
+}
+
+.news-info_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-top: #b8aed5 1px solid;
+  border-bottom: #b8aed5 1px solid;
+  margin: 30px auto;
+}
+.news-info_list div {
+  width: 45%;
+  padding: 15px;
+  margin: 20px 0;
+  transition: 0.5s ease;
+}
+.news-info_list div:hover {
+  background-color: #f8f7ff;
+}
+.news-info_list div:nth-child(1) {
+  border-right: #b8aed5 1px solid;
+}
+.news-info_list div a {
+  color: #391e88;
+}
+
+.news-list_link {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.news-list_link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .info-title_theme {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+  .bigheadline-title {
+    font-size: 2.4rem;
+  }
+  .subheadline-title {
+    font-size: 1.8rem;
+  }
+  .news-info_list, .news-list_link {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=news-info.css.map */

@@ -1,0 +1,71 @@
+footer {
+  background-color: #120e19;
+  padding: 50px 5px 20px 5px;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer ul li {
+  padding-left: 25px;
+  letter-spacing: 0.1rem;
+}
+footer ul li a {
+  color: #f0f0f0;
+  font-weight: 450;
+  font-size: 1.3rem;
+}
+footer small {
+  display: block;
+  color: #a798b7;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 450;
+  margin: 30px 0 20px 0;
+}
+
+.top-btn {
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 20px;
+}
+.top-btn span {
+  display: block;
+  position: relative;
+  background: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  right: 30px;
+  bottom: 20px;
+  box-shadow: 0 0 8px gray;
+}
+.top-btn span::before {
+  position: absolute;
+  right: 22px;
+  bottom: 15px;
+  display: block;
+  content: "";
+  width: 2px;
+  height: 10px;
+  background: #3b0355;
+}
+.top-btn span::after {
+  position: absolute;
+  right: 19px;
+  bottom: 18px;
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #3b0355;
+  border-top: 2px solid #3b0355;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  footer ul {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=footer.css.map */
