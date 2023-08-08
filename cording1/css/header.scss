@@ -1,7 +1,7 @@
 header {
     position: fixed;
     width: 100%;
-    height: 70px;
+    height: 80px;
     transition: background-color 0.5s ease;
     z-index: 10;
 
@@ -10,6 +10,16 @@ header {
         height: 60px;
         transition: .1s ease;
       }
+}
+.header-nonidex {
+    display: none;
+
+    &:active {
+        display: block;
+    }
+}
+.header-nav {
+    display: none;
 }
 .header-logo {
     padding: 15px 0 0 20px;
@@ -20,12 +30,13 @@ header {
         transition: .1s ease;
       }
 }
-.header-nav li{
-    padding-right: 20px;
+.header-nav_nemu li{
+    padding-bottom: 20px;
+    text-align: center;
 
     a {
         color: #fff;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
       }
 }
 .header-btn {
@@ -71,9 +82,7 @@ header {
         }
      }
 }
-body.open .header-btn {
-    z-index: 990;  //*←あとで確認*//
-}
+
     body.open .header-btn span {
         width: 30px;
         background-color: transparent;
@@ -89,7 +98,7 @@ body.open .header-btn {
             transform: rotate(-45deg);
         }
     }
-    .header-nav {
+    .header-nav_nemu {
         display: none;
         display: flex;
         flex-direction: column;
@@ -100,14 +109,13 @@ body.open .header-btn {
         top: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(-50deg, #3b0355 0%, #c104eb 80%);
+        background: linear-gradient(-50deg, #19074A 0%, #642390 80%);
         font-size: 20px;
         font-weight: 900;
         color: #fff;
         opacity: 0;
       visibility: hidden;
         transition: opacity 0.5s ease, visibility 0s linear 0.5s;
-        z-index: 990;
     
         ul li a {
             color:#fff;
@@ -130,7 +138,7 @@ body.open .header-btn {
             }
             }
         }
-    body.open .header-nav {
+    body.open .header-nav_nemu {
         opacity: 1;
       visibility: visible;
       transition: .3s ease;
@@ -140,11 +148,9 @@ body.open .header-btn {
 @media screen and (min-width:768px) {
     header {
         display: flex;
-        position: fixed;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
-        height: 80px;
+        
 }
 .header-logo {
     width: 160px;
@@ -154,11 +160,11 @@ body.open .header-btn {
         transition: .1s ease;
       }
 }
+.header-nav_nemu {
+    display: none;
+}
 .header-nav {
     display: block;
-    opacity: 1;
-    visibility: visible;
-    background: transparent;
     width: auto;
     height: auto;
 }
@@ -171,6 +177,9 @@ body.open .header-btn {
             &.active {
                 padding-top: 15px;
                 transition: .1s ease;
+              }
+              a {
+                color: #fff;
               }
         }
     }

@@ -9,7 +9,6 @@
   background-position: center center;
   height: 100vh;
   margin-bottom: 120px;
-  z-index: -1;
 }
 
 .main {
@@ -189,26 +188,28 @@ h2 {
   transform: translateX(0.1875em);
 }
 
-.index_works {
-  height: 1000px;
-}
-
-#slider-item ul {
+.slider {
   position: relative;
 }
-#slider-item ul li {
-  position: absolute;
-  width: 100%;
+
+.slider-item01 {
+  background: url(../img/works/smoothiesta.jpg);
 }
 
-#slider-btn ul li a {
-  text-indent: -9999px;
-  text-decoration: none;
-  display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 7px;
-  background: #A8DCDB;
+.slider-item02 {
+  background: url(../img/works/lamina.jpg);
+}
+
+.slider-item03 {
+  background: url(../img/works/web-conference.jpg);
+}
+
+.slider-img {
+  max-width: 100%; /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height: 500px;
+  background-repeat: no-repeat; /*背景画像をリピートしない*/
+  background-position: center; /*背景画像の位置を中央に*/
+  background-size: contain;
 }
 
 /*矢印の設定*/
@@ -216,13 +217,13 @@ h2 {
 .slick-next {
   position: absolute;
   z-index: 3;
-  top: 42%;
+  top: 50%;
   cursor: pointer; /*マウスカーソルを指マークに*/
   outline: none; /*クリックをしたら出てくる枠線を消す*/
-  border-top: 2px solid #000; /*矢印の色*/
-  border-right: 2px solid #000; /*矢印の色*/
-  height: 25px;
-  width: 25px;
+  border-top: 4px solid #391e88; /*矢印の色*/
+  border-right: 4px solid #391e88; /*矢印の色*/
+  height: 20px;
+  width: 20px;
 }
 
 .slick-prev { /*戻る矢印の位置と形状*/
@@ -237,9 +238,11 @@ h2 {
 
 /*ドットナビゲーションの設定*/
 .slick-dots {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   z-index: 3;
-  text-align: center;
+  text-align: right;
   margin: -50px 0 0 0; /*ドットの位置*/
 }
 
@@ -255,11 +258,67 @@ h2 {
   height: 8px; /*ドットボタンのサイズ*/
   display: block;
   border-radius: 50%;
-  background: #fff; /*ドットボタンの色*/
+  background: #ccc; /*ドットボタンの色*/
 }
 
 .slick-dots .slick-active button {
   background: #333; /*ドットボタンの現在地表示の色*/
+}
+
+/*ワークステキスト部分*/
+.index-works_text {
+  position: relative;
+  margin: 30px 0;
+  padding: 30px 0;
+  text-align: center;
+}
+.index-works_text::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #f0f0f0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.index-works_text p {
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+/*ワークスMOREボタン*/
+.index-works_btn {
+  margin-top: 20px;
+  text-align: center;
+}
+.index-works_btn a {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(-50deg, #3b0355 0%, #c104eb 80%);
+  border-radius: 50px;
+  color: #fff;
+  padding: 15px 70px;
+  letter-spacing: 0.1rem;
+}
+.index-works_btn a::after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px; /* 要素の右からの距離 */
+  width: 0;
+  height: 0;
+  border-radius: 2px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid #fff;
+  transition: all 0.3s ease 0s;
+}
+.index-works_btn a:hover:after {
+  transform: translateX(0.1875em);
 }
 
 .index-com {
@@ -472,6 +531,46 @@ h2 {
   }
   .index-sv_list ul li {
     width: 31%;
+  }
+  .index-works_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .index-works_wrapper::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 60%;
+    height: 600px;
+    background-color: #f0f0f0;
+    z-index: -1;
+  }
+  .slider-item {
+    position: relative;
+    width: 60%;
+    height: auto;
+  }
+  .slick-prev { /*戻る矢印の位置と形状*/
+    transform: rotate(-135deg);
+  }
+  .slick-next { /*次へ矢印の位置と形状*/
+    transform: rotate(45deg);
+  }
+  .index-works_text {
+    width: 40%;
+    padding: 40px;
+  }
+  .index-works_text::after {
+    display: none;
+  }
+  .index-works_text p {
+    font-weight: 400;
+    padding: 10px 0;
   }
   .index-com {
     background-image: url(../img/bg-face.png);

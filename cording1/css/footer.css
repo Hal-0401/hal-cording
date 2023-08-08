@@ -30,6 +30,9 @@ footer small {
   right: 25px;
   bottom: 20px;
 }
+.top-btn:active {
+  display: block;
+}
 .top-btn span {
   display: block;
   position: relative;

@@ -38,9 +38,25 @@ h3 {
 ul {
     list-style: none;
 }
+
 .header-space {
     height: 200px;
+    background: url(../img/hero.jpg);
+    background-position: center;
 }
+.header-space_title {
+    font-size: 3.6rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+   padding-top: 80px;
+}
+.header-space_subtitle {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    padding-top: 10px;
+}
+
 .breadcrumb {
     position: sticky;
     top: 60px;

@@ -32,6 +32,9 @@ footer {
     right: 25px;
     bottom: 20px;
 
+    &:active {
+        display: block;
+      }
    span {
     display: block;
     position: relative;

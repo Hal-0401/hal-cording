@@ -20,18 +20,13 @@
   
     @media screen and (min-width:768px) {
       .works-container {
-        display: grid;
-        max-width: 1200px;
-        margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 10px; /* 画像間の余白を設定 */
+        display: flex;
+        flex-wrap: wrap;
       }
       .works-image_wrapper {
-        margin: 5px; 
+        margin: 10px;
+        width: calc(33.33333% - 20px);
 
-        &:nth-child(1), &:nth-child(4) {
-          margin-left: 0;
-        }
         img {
           max-width: 100%; /* 画像の最大幅を100%に制限 */
     height: auto;
