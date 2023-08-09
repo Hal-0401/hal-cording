@@ -238,12 +238,11 @@ transition: all 0.3s ease 0s;
 /*ドットナビゲーションの設定*/
 
 .slick-dots {
-	position: absolute;
+	display: flex;
+  justify-content: flex-end;
   bottom:0;
   right: 0;
 	z-index: 3;
-    text-align:right;
-	margin:-50px 0 0 0;/*ドットの位置*/
 }
 
 .slick-dots li {
